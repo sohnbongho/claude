@@ -38,3 +38,9 @@
 [2026-05-16T07:21:12.861Z] [bg] bg settled b7e907b5 (done)
 [2026-05-16T07:24:53.357Z] [bg] bg settled 9d771189 (done)
 [2026-05-16T07:29:31.586Z] [bg] bg settled d272e2f4 (done)
+[2026-05-16T08:02:35.518Z] [supervisor] auth: proactive refresh starting
+[2026-05-16T08:02:35.532Z] [supervisor] auth: scheduling proactive refresh in 522s
+[2026-05-16T08:02:35.532Z] [supervisor] auth: token still valid (cross-process refresh or not yet due)
+[2026-05-16T08:10:40.602Z] [supervisor] auth: proactive refresh starting
+[2026-05-16T08:10:41.042Z] [supervisor] auth: scheduling proactive refresh in 28560s
+[2026-05-16T08:10:41.042Z] [supervisor] auth: proactive refresh succeeded
