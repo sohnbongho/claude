@@ -27,3 +27,11 @@
 [2026-05-16T06:14:46.599Z] [bg] bg spare spawned host pid=15315
 [2026-05-16T06:17:45.983Z] [bg] bg claimed-spare b7e907b5 (fleet)
 [2026-05-16T06:17:45.987Z] [bg] bg spare spawned host pid=15478
+[2026-05-16T06:21:37.514Z] [bg] bg settled f8181545 (killed)
+[2026-05-16T06:24:11.481Z] [bg] bg claimed-spare d272e2f4 (slash)
+[2026-05-16T06:24:11.485Z] [bg] bg spare spawned host pid=16107
+[2026-05-16T06:24:11.513Z] [bg] bg claimed-spare 9d771189 (spare)
+[2026-05-16T06:24:11.515Z] [bg] bg spare spawned host pid=16123
+[2026-05-16T06:28:40.819Z] [bg] bg claimed-spare 5332e939 (spare)
+[2026-05-16T06:28:40.822Z] [bg] bg spare spawned host pid=17011
+[2026-05-16T06:28:52.212Z] [bg] bg settled 5332e939 (killed)
