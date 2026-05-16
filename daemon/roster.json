@@ -1,60 +1,8 @@
 {
   "proto": 1,
   "supervisorPid": 15266,
-  "updatedAt": 1778912932213,
+  "updatedAt": 1778916293358,
   "workers": {
-    "b7e907b5": {
-      "pid": 15315,
-      "procStart": "2407462",
-      "sessionId": "b7e907b5-ae10-4890-b432-567eb5cdd609",
-      "rendezvousSock": "/tmp/cc-daemon-1000/f6b0131a/rv/b7e907b5.sock",
-      "ptySock": "/tmp/cc-daemon-1000/f6b0131a/spare/45ca20ac.pty.sock",
-      "cliVersion": "2.1.143",
-      "startedAt": 1778912265982,
-      "attempt": 1,
-      "cwd": "/home/bhson",
-      "dispatch": {
-        "proto": 1,
-        "short": "b7e907b5",
-        "nonce": "bc40fff4",
-        "sessionId": "b7e907b5-ae10-4890-b432-567eb5cdd609",
-        "createdAt": 1778912265979,
-        "source": "fleet",
-        "cwd": "/home/bhson",
-        "launch": {
-          "mode": "prompt",
-          "args": [
-            "--session-id",
-            "b7e907b5-ae10-4890-b432-567eb5cdd609",
-            "--agent",
-            "anal",
-            "--",
-            "클라이언트 작업을 할때 unity가 좋을까? godot이 좋을까?"
-          ]
-        },
-        "env": {},
-        "isolation": "none",
-        "respawnFlags": [
-          "--agent",
-          "anal"
-        ],
-        "agent": "anal",
-        "seed": {
-          "intent": "클라이언트 작업을 할때 unity가 좋을까? godot이 좋을까?"
-        },
-        "cols": 108,
-        "rows": 30
-      },
-      "decModes": [
-        1000,
-        1002,
-        1003,
-        1006,
-        2004,
-        1004,
-        2031
-      ]
-    },
     "d272e2f4": {
       "pid": 15478,
       "procStart": "2426886",
@@ -83,56 +31,6 @@
         "env": {},
         "isolation": "none",
         "respawnFlags": [],
-        "seed": {
-          "intent": ""
-        },
-        "cols": 108,
-        "rows": 30
-      },
-      "decModes": [
-        1000,
-        1002,
-        1003,
-        1006,
-        2004,
-        1004,
-        2031
-      ]
-    },
-    "9d771189": {
-      "pid": 16107,
-      "procStart": "2468662",
-      "sessionId": "9d771189-6fc8-462e-81bb-437f3fc0c0ea",
-      "rendezvousSock": "/tmp/cc-daemon-1000/f6b0131a/rv/9d771189.sock",
-      "ptySock": "/tmp/cc-daemon-1000/f6b0131a/spare/1a25f081.pty.sock",
-      "cliVersion": "2.1.143",
-      "startedAt": 1778912651512,
-      "attempt": 1,
-      "cwd": "/mnt/d/01-git/csharp_likeactor",
-      "dispatch": {
-        "proto": 1,
-        "short": "9d771189",
-        "nonce": "4e4d5230",
-        "sessionId": "9d771189-6fc8-462e-81bb-437f3fc0c0ea",
-        "createdAt": 1778912651480,
-        "source": "spare",
-        "cwd": "/mnt/d/01-git/csharp_likeactor",
-        "launch": {
-          "mode": "prompt",
-          "args": [
-            "--session-id",
-            "9d771189-6fc8-462e-81bb-437f3fc0c0ea",
-            "--agent",
-            "claude"
-          ]
-        },
-        "env": {},
-        "isolation": "none",
-        "respawnFlags": [
-          "--agent",
-          "claude"
-        ],
-        "agent": "claude",
         "seed": {
           "intent": ""
         },

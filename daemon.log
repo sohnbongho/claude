@@ -35,3 +35,5 @@
 [2026-05-16T06:28:40.819Z] [bg] bg claimed-spare 5332e939 (spare)
 [2026-05-16T06:28:40.822Z] [bg] bg spare spawned host pid=17011
 [2026-05-16T06:28:52.212Z] [bg] bg settled 5332e939 (killed)
+[2026-05-16T07:21:12.861Z] [bg] bg settled b7e907b5 (done)
+[2026-05-16T07:24:53.357Z] [bg] bg settled 9d771189 (done)
