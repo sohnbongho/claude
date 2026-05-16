@@ -1,51 +1,6 @@
 {
   "proto": 1,
   "supervisorPid": 15266,
-  "updatedAt": 1778916293358,
-  "workers": {
-    "d272e2f4": {
-      "pid": 15478,
-      "procStart": "2426886",
-      "sessionId": "d272e2f4-be20-4e83-9a49-f70de00a6ac1",
-      "rendezvousSock": "/tmp/cc-daemon-1000/f6b0131a/rv/d272e2f4.sock",
-      "ptySock": "/tmp/cc-daemon-1000/f6b0131a/spare/76d120f5.pty.sock",
-      "cliVersion": "2.1.143",
-      "startedAt": 1778912651480,
-      "attempt": 1,
-      "cwd": "/mnt/d/01-git/csharp_likeactor",
-      "dispatch": {
-        "proto": 1,
-        "short": "d272e2f4",
-        "nonce": "40f65470",
-        "sessionId": "d272e2f4-be20-4e83-9a49-f70de00a6ac1",
-        "createdAt": 1778912651454,
-        "source": "slash",
-        "cwd": "/mnt/d/01-git/csharp_likeactor",
-        "launch": {
-          "mode": "prompt",
-          "args": [
-            "--session-id",
-            "d272e2f4-be20-4e83-9a49-f70de00a6ac1"
-          ]
-        },
-        "env": {},
-        "isolation": "none",
-        "respawnFlags": [],
-        "seed": {
-          "intent": ""
-        },
-        "cols": 108,
-        "rows": 30
-      },
-      "decModes": [
-        1000,
-        1002,
-        1003,
-        1006,
-        2004,
-        1004,
-        2031
-      ]
-    }
-  }
+  "updatedAt": 1778916571587,
+  "workers": {}
 }
