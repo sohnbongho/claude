@@ -1,0 +1,29 @@
+# 인증 정보 (절대 커밋 금지)
+.credentials.json
+
+# 자동 생성 파일들
+history.jsonl
+mcp-needs-auth-cache.json
+
+# 캐시 및 임시 디렉토리
+cache/
+downloads/
+backups/
+session-env/
+shell-snapshots/
+
+# 대화 세션 데이터
+sessions/
+
+# 플러그인 마켓플레이스 (자동 다운로드)
+plugins/
+
+# 프로젝트별 대화 기록 (용량 큼)
+projects/**/*.jsonl
+
+# 프로젝트별 툴 실행 결과
+projects/**/tool-results/
+
+# OS 파일
+.DS_Store
+Thumbs.db

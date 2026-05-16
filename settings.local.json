@@ -4,12 +4,12 @@
       "Bash(git branch *)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git config *)",
-      "Bash(git -C ~/.claude remote -v)",
-      "Bash(git -C ~/.claude status)",
-      "Bash(git -C ~/.claude log --oneline -5)",
-      "Bash(git -C ~/.claude remote add origin https://github.com/sohnbongho/claude.git)",
-      "Bash(git -C ~/.claude add settings.local.json)"
+      "Bash(git -C ~/.claude diff)",
+      "Bash(git -C ~/.claude rebase --abort)",
+      "Bash(git -C ~/.claude stash pop)",
+      "Bash(git *)",
+      "Skill(update-config)",
+      "Bash(bash -c 'cd ~/.claude && if ! git diff --quiet || ! git diff --cached --quiet || [ -n \"$\\(git ls-files --others --exclude-standard\\)\" ]; then git add -A && git diff --cached --quiet || \\(git commit -m \"Auto-sync: $\\(date \\\\\"+%Y-%m-%d %H:%M:%S\\\\\"\\)\" && git push origin main 2>&1\\); fi; exit 0')"
     ]
   }
 }
