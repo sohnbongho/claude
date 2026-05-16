@@ -18,6 +18,8 @@ model: sonnet
 | `mydo` | 계획에 따른 실제 코드 구현 |
 | `myreview` | 작성된 코드 리뷰 및 품질 검증 |
 | `mysetup` | Claude 설정 관리 |
+| `anal` | 코드 분석 (수정 없음, 읽기·분석 전용) |
+| `unity` | Unity 전담 (분석/계획/구현/리뷰) |
 
 ## 작업 흐름
 

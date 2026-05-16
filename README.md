@@ -11,6 +11,8 @@
 | `@mydo` | 계획 기반 실제 코드 구현 | Sonnet (최신) |
 | `@myreview` | 코드 리뷰 및 품질/보안 검증 | Sonnet (최신) |
 | `@mysetup` | Claude Code 설정 관리 | Sonnet (최신) |
+| `@anal` | 코드 분석 전문 (수정 없음, 읽기·분석만) | Sonnet (최신) |
+| `@unity` | Unity 전담 (분석/계획/구현/리뷰 멀티모드) | Sonnet (최신) |
 
 > `/advisor` 도구만 Opus (최신) 사용. 버전은 고정하지 않아 항상 최신 모델로 동작.
 
@@ -22,6 +24,8 @@
 @mydo    위 계획대로 구현해줘
 @myreview 방금 작성한 코드 리뷰해줘
 @mysetup 세션 시작 시 날씨 알림 훅 추가해줘
+@anal    이 클래스 구조 분석해줘
+@unity   Unity 프로젝트 현황 파악해줘
 ```
 
 ## 전형적인 워크플로우
