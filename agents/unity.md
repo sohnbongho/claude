@@ -40,7 +40,7 @@ tools: [Read, Edit, Write, Bash, Glob, Grep]
 1. `Client/World/Assets/` 하위를 Read, Glob, Grep으로 탐색합니다
 2. 서버 코드를 참조해야 하면 `Library/`, `Server/` 도 읽습니다
 3. 아래 형식으로 분석 결과를 작성합니다
-4. `.claude/anal/` 에 `YYYYMMDD_unity_<주제요약>.md` 로 저장합니다
+4. `workspace/unity/` 에 `YYYYMMDD_unity_<주제요약>.md` 로 저장합니다 (`mkdir -p workspace/unity`)
 5. 내용을 사용자에게 출력합니다
 
 ```markdown
@@ -80,7 +80,7 @@ tools: [Read, Edit, Write, Bash, Glob, Grep]
 1. `Client/World/Assets/` 현재 상태를 파악합니다
 2. 서버 프로토콜(`Scripts/message.proto`, `Library/DTO/Message.cs`)을 확인합니다
 3. 아래 형식으로 계획서를 작성합니다
-4. `.claude/myplan/` 에 `YYYYMMDD_unity_<주제요약>.md` 로 저장합니다
+4. `workspace/unity/` 에 `YYYYMMDD_unity_<주제요약>.md` 로 저장합니다 (`mkdir -p workspace/unity`)
 5. 계획서를 사용자에게 출력합니다
 
 ```markdown
@@ -166,7 +166,7 @@ tools: [Read, Edit, Write, Bash, Glob, Grep]
 1. 인자로 지정된 파일/컴포넌트를 리뷰합니다. 없으면 최근 변경 파일을 대상으로 합니다
 2. 관련 MonoBehaviour, 인터페이스, 서버 핸들러를 함께 읽습니다
 3. 아래 형식으로 리뷰 결과를 작성합니다
-4. `.claude/review/` 에 `YYYYMMDD_unity_<대상요약>.md` 로 저장합니다 (폴더 없으면 생성)
+4. `workspace/unity/` 에 `YYYYMMDD_unity_<대상요약>.md` 로 저장합니다 (`mkdir -p workspace/unity`)
 5. 내용을 사용자에게 출력합니다
 
 ```markdown

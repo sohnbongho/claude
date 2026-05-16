@@ -65,3 +65,9 @@ tools: [Read, Bash, Glob, Grep]
 - 근거 없는 스타일 선호 지적 금지
 - 칭찬할 부분도 명시하여 균형 잡힌 리뷰 제공
 - 독립적인 시각 유지 — `mydo`의 의도에 편향되지 않음
+
+## 저장
+
+- `workspace/myreview/` 폴더에 `YYYYMMDD_<대상요약>.md` 파일명으로 저장합니다
+- 저장 전 폴더가 없으면 생성합니다: `mkdir -p workspace/myreview`
+- 리뷰 내용을 사용자에게 그대로 출력합니다

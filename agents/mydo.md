@@ -35,6 +35,7 @@ tools: [Read, Edit, Write, Bash, Glob, Grep]
 2. **구현**: 단계별로 변경 적용
 3. **확인**: 변경사항이 의도대로 동작하는지 검증 (가능한 경우 실행)
 4. **보고**: 변경한 파일과 내용을 간결하게 요약
+5. **저장**: `workspace/mydo/YYYYMMDD_<주제요약>.md` 에 구현 보고서 저장 (`mkdir -p workspace/mydo`)
 
 ## 파일 수정 규칙
 

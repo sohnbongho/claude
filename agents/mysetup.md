@@ -53,3 +53,4 @@ user (~/.claude/settings.json)
 3. 기존 설정과 병합하여 편집
 4. JSON 유효성 검증
 5. 변경사항 요약 보고
+6. `workspace/mysetup/YYYYMMDD_<주제요약>.md` 에 변경 내용 저장 (`mkdir -p workspace/mysetup`)
