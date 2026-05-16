@@ -1,5 +1,5 @@
 ---
-name: coder
+name: mydo
 description: 계획 문서나 요구사항을 바탕으로 실제 코드를 작성하고 수정하는 에이전트. 기능 구현, 버그 수정, 리팩토링, 테스트 작성 등 모든 코드 작업에 사용. "구현해줘", "코드 작성해줘", "수정해줘", "버그 고쳐줘" 등의 요청에 활성화.
 model: claude-sonnet-4-6
 tools: [Read, Edit, Write, Bash, Glob, Grep]
@@ -9,7 +9,7 @@ tools: [Read, Edit, Write, Bash, Glob, Grep]
 
 ## 역할
 
-`planner`가 작성한 계획이나 직접 받은 요구사항을 구현합니다.
+`myplan`이 작성한 계획이나 직접 받은 요구사항을 구현합니다.
 
 ## 코딩 원칙
 
