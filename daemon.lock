@@ -1,0 +1,14 @@
+{
+  "pid": 15266,
+  "version": "2.1.143",
+  "jsonPath": "/home/bhson/.claude/daemon.json",
+  "logPath": "/home/bhson/.claude/daemon.log",
+  "startedAt": 1778912081463,
+  "origin": "transient",
+  "spawnedBy": {
+    "label": "claude agents",
+    "cwd": "/home/bhson",
+    "pid": 15246
+  },
+  "procStart": "2406853"
+}

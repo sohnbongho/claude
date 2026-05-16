@@ -1,6 +1,109 @@
 {
   "proto": 1,
-  "supervisorPid": 1171,
-  "updatedAt": 1778890841787,
-  "workers": {}
+  "supervisorPid": 15266,
+  "updatedAt": 1778912266937,
+  "workers": {
+    "f8181545": {
+      "pid": 15287,
+      "procStart": "2406953",
+      "sessionId": "f8181545-f3c0-4737-9cff-2f6422b3bb87",
+      "rendezvousSock": "/tmp/cc-daemon-1000/f6b0131a/rv/f8181545.sock",
+      "ptySock": "/tmp/cc-daemon-1000/f6b0131a/spare/3cf77937.pty.sock",
+      "cliVersion": "2.1.143",
+      "startedAt": 1778912086595,
+      "attempt": 1,
+      "cwd": "/home/bhson",
+      "dispatch": {
+        "proto": 1,
+        "short": "f8181545",
+        "nonce": "9e897759",
+        "sessionId": "f8181545-f3c0-4737-9cff-2f6422b3bb87",
+        "createdAt": 1778912080475,
+        "source": "spare",
+        "cwd": "/home/bhson",
+        "launch": {
+          "mode": "prompt",
+          "args": [
+            "--session-id",
+            "f8181545-f3c0-4737-9cff-2f6422b3bb87",
+            "--agent",
+            "claude"
+          ]
+        },
+        "env": {},
+        "isolation": "none",
+        "respawnFlags": [
+          "--agent",
+          "claude"
+        ],
+        "agent": "claude",
+        "seed": {
+          "intent": ""
+        },
+        "cols": 108,
+        "rows": 30
+      },
+      "decModes": [
+        1000,
+        1002,
+        1003,
+        1006,
+        2004,
+        1004,
+        2031
+      ]
+    },
+    "b7e907b5": {
+      "pid": 15315,
+      "procStart": "2407462",
+      "sessionId": "b7e907b5-ae10-4890-b432-567eb5cdd609",
+      "rendezvousSock": "/tmp/cc-daemon-1000/f6b0131a/rv/b7e907b5.sock",
+      "ptySock": "/tmp/cc-daemon-1000/f6b0131a/spare/45ca20ac.pty.sock",
+      "cliVersion": "2.1.143",
+      "startedAt": 1778912265982,
+      "attempt": 1,
+      "cwd": "/home/bhson",
+      "dispatch": {
+        "proto": 1,
+        "short": "b7e907b5",
+        "nonce": "bc40fff4",
+        "sessionId": "b7e907b5-ae10-4890-b432-567eb5cdd609",
+        "createdAt": 1778912265979,
+        "source": "fleet",
+        "cwd": "/home/bhson",
+        "launch": {
+          "mode": "prompt",
+          "args": [
+            "--session-id",
+            "b7e907b5-ae10-4890-b432-567eb5cdd609",
+            "--agent",
+            "anal",
+            "--",
+            "클라이언트 작업을 할때 unity가 좋을까? godot이 좋을까?"
+          ]
+        },
+        "env": {},
+        "isolation": "none",
+        "respawnFlags": [
+          "--agent",
+          "anal"
+        ],
+        "agent": "anal",
+        "seed": {
+          "intent": "클라이언트 작업을 할때 unity가 좋을까? godot이 좋을까?"
+        },
+        "cols": 108,
+        "rows": 30
+      },
+      "decModes": [
+        1000,
+        1002,
+        1003,
+        1006,
+        2004,
+        1004,
+        2031
+      ]
+    }
+  }
 }
