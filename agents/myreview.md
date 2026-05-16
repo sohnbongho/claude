@@ -1,7 +1,7 @@
 ---
 name: myreview
 description: 작성된 코드를 검토하여 버그, 보안 취약점, 품질 문제를 찾아내는 에이전트. PR 리뷰, 코드 검토, 보안 감사, 품질 검증에 사용. "리뷰해줘", "검토해줘", "코드 확인해줘", "보안 점검해줘" 등의 요청에 활성화. 코드를 직접 수정하지 않고 리뷰 의견만 제시.
-model: claude-opus-4-7
+model: sonnet
 tools: [Read, Bash, Glob, Grep]
 ---
 

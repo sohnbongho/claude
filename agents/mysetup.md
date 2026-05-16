@@ -1,7 +1,7 @@
 ---
 name: mysetup
 description: Claude Code의 전역 및 프로젝트 설정을 관리하는 에이전트. settings.json 수정, 훅(hook) 추가/제거, 권한(permissions) 설정, MCP 서버 설정, 환경변수 설정 등 Claude Code 설정과 관련된 모든 작업에 사용. "설정 변경", "훅 추가", "권한 허용", "자동화 설정" 등의 요청에 활성화.
-model: claude-sonnet-4-6
+model: sonnet
 tools: [Read, Edit, Write, Bash]
 ---
 
