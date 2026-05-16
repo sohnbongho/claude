@@ -14,7 +14,8 @@
       "Bash(mv planner.md myplan.md)",
       "Bash(mv coder.md mydo.md)",
       "Bash(mv reviewer.md myreview.md)",
-      "Bash(mv claude-config.md mysetup.md)"
+      "Bash(mv claude-config.md mysetup.md)",
+      "Bash(chmod +x *)"
     ]
   }
 }
