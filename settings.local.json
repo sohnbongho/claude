@@ -3,7 +3,13 @@
     "allow": [
       "Bash(git branch *)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(git config *)",
+      "Bash(git -C ~/.claude remote -v)",
+      "Bash(git -C ~/.claude status)",
+      "Bash(git -C ~/.claude log --oneline -5)",
+      "Bash(git -C ~/.claude remote add origin https://github.com/sohnbongho/claude.git)",
+      "Bash(git -C ~/.claude add settings.local.json)"
     ]
   }
 }
