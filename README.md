@@ -6,11 +6,13 @@
 
 | 호출명 | 역할 | 모델 |
 |--------|------|------|
-| `@myor` | 모든 에이전트를 총괄하는 오케스트레이터 | Opus 4.7 |
-| `@myplan` | 요구사항 분석 및 작업계획 문서 작성 | Sonnet 4.6 |
-| `@mydo` | 계획 기반 실제 코드 구현 | Sonnet 4.6 |
-| `@myreview` | 코드 리뷰 및 품질/보안 검증 | Opus 4.7 |
-| `@mysetup` | Claude Code 설정 관리 | Sonnet 4.6 |
+| `@myor` | 모든 에이전트를 총괄하는 오케스트레이터 | Sonnet (최신) |
+| `@myplan` | 요구사항 분석 및 작업계획 문서 작성 | Sonnet (최신) |
+| `@mydo` | 계획 기반 실제 코드 구현 | Sonnet (최신) |
+| `@myreview` | 코드 리뷰 및 품질/보안 검증 | Sonnet (최신) |
+| `@mysetup` | Claude Code 설정 관리 | Sonnet (최신) |
+
+> `/advisor` 도구만 Opus (최신) 사용. 버전은 고정하지 않아 항상 최신 모델로 동작.
 
 ## 사용법
 
