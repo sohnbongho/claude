@@ -18,7 +18,11 @@
       "Write(.claude/anal/*.md)",
       "Write(.claude/myplan/*.md)",
       "Write(.claude/myreview/*.md)",
-      "Write(/home/bhson/.claude/workspace/**)"
+      "Write(/home/bhson/.claude/workspace/**)",
+      "Edit(.claude/anal/*.md)",
+      "Edit(.claude/myplan/*.md)",
+      "Edit(.claude/myreview/*.md)",
+      "Edit(/home/bhson/.claude/workspace/**)"
     ]
   }
 }
