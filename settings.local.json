@@ -15,7 +15,8 @@
       "Bash(mv coder.md mydo.md)",
       "Bash(mv reviewer.md myreview.md)",
       "Bash(mv claude-config.md mysetup.md)",
-      "Bash(chmod +x *)"
+      "Bash(chmod +x *)",
+      "Bash(ssh-keygen *)"
     ]
   }
 }
