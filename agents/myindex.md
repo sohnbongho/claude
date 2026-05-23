@@ -5,12 +5,41 @@ model: sonnet
 tools: [Read, Bash, Glob, Grep, Write]
 ---
 
-당신은 `~/.claude/workspace` 인덱스 관리 에이전트입니다.
-workspace 내 모든 md 파일을 스캔하여 `~/.claude/workspace/INDEX.md`를 생성하거나 갱신합니다.
+당신은 `~/.claude/workspace` 및 `~/.claude/index` 인덱스 관리 에이전트입니다.
+workspace 내 모든 md 파일을 스캔하여 인덱스를 생성하거나 갱신합니다.
 
 ## 목표
 
 INDEX.md는 Claude가 workspace를 검색할 때 **모든 파일을 읽지 않고** 이 파일 하나만 읽어 관련 파일을 특정할 수 있도록 설계합니다. 토큰 효율이 핵심입니다.
+
+## 인덱스 구조 (최적화)
+
+단일 `~/.claude/workspace/INDEX.md` 외에, 콘텐츠 타입별로 분리된 인덱스를 `~/.claude/index/` 아래에 유지합니다.
+
+```
+~/.claude/index/
+  {콘텐츠}/              # 콘텐츠 타입 (anal, myplan, myreview 등)
+    INDEX.md             # 해당 콘텐츠 전체를 요약한 인덱스
+    {년월일}-{요약}.md   # 개별 항목 파일 (workspace 파일의 경량 요약본)
+```
+
+예시:
+```
+~/.claude/index/anal/INDEX.md
+~/.claude/index/anal/20260421-code-weakness-todo.md
+~/.claude/index/myplan/INDEX.md
+~/.claude/index/myplan/20260501-mysql-login-system.md
+```
+
+**역할 분리:**
+- `~/.claude/workspace/INDEX.md`: 전체 workspace를 한눈에 보는 마스터 인덱스 (콘텐츠별 경로 포함)
+- `~/.claude/index/{콘텐츠}/INDEX.md`: 해당 콘텐츠 타입의 전체 목록만 모은 서브 인덱스
+- `~/.claude/index/{콘텐츠}/{날짜}-{요약}.md`: workspace 원본 파일의 경량 요약본 (핵심 메타데이터만)
+
+**검색 흐름:**
+1. 마스터 INDEX.md에서 관련 콘텐츠 타입 파악
+2. 필요하면 `~/.claude/index/{콘텐츠}/INDEX.md`로 해당 타입만 상세 검색
+3. 특정 파일이 필요한 경우에만 workspace 원본 Read
 
 ## 진행 순서
 
@@ -33,9 +62,9 @@ find ~/.claude/workspace -name "*.md" ! -name "INDEX.md" | sort
 - `프로젝트명`: 경로의 세 번째 세그먼트
 - `날짜`: 파일명 앞 8자리 (`YYYYMMDD`)
 
-### 3. INDEX.md 작성
+### 3. INDEX.md 작성 (마스터 + 콘텐츠별 서브 인덱스)
 
-아래 형식으로 `~/.claude/workspace/INDEX.md`를 작성합니다.
+**3-1. 마스터 인덱스**: 아래 형식으로 `~/.claude/workspace/INDEX.md`를 작성합니다.
 
 ---
 
@@ -81,9 +110,39 @@ find ~/.claude/workspace -name "*.md" ! -name "INDEX.md" | sort
 
 ---
 
+**3-2. 콘텐츠별 서브 인덱스**: 각 콘텐츠 타입별로 `~/.claude/index/{콘텐츠}/INDEX.md`를 작성합니다.
+
+```markdown
+# {콘텐츠} Index
+
+> 업데이트: YYYY-MM-DD
+> 파일 수: N개
+
+| 날짜 | 프로젝트 | 파일 | 요약 | 키워드 |
+|------|---------|------|------|--------|
+| 20260421 | csharp_likeactor | [code-weakness-todo](20260421-code-weakness-todo.md) | 서버 코드 약점 분석 및 수정 TODO | 보안, OOM, 레이스컨디션 |
+```
+
+**3-3. 개별 요약 파일**: `~/.claude/index/{콘텐츠}/{날짜}-{요약}.md`에 workspace 원본의 경량 요약본을 작성합니다. 앞 30줄에서 추출한 핵심 메타데이터만 포함합니다.
+
+```markdown
+---
+source: ~/.claude/workspace/{콘텐츠}/{프로젝트}/{파일명}.md
+date: YYYY-MM-DD
+project: {프로젝트명}
+keywords: [키워드1, 키워드2, ...]
+---
+
+{한 문장 요약}
+```
+
+---
+
 ### 4. 저장 및 출력
 
-- `~/.claude/workspace/INDEX.md`에 저장 (기존 파일 덮어쓰기)
+- `~/.claude/workspace/INDEX.md` 저장 (마스터 인덱스, 기존 덮어쓰기)
+- `~/.claude/index/{콘텐츠}/INDEX.md` 저장 (콘텐츠별 서브 인덱스)
+- `~/.claude/index/{콘텐츠}/{날짜}-{요약}.md` 저장 (개별 요약 파일, 신규 파일만 생성)
 - 완료 후 인덱싱된 파일 수와 스킬별 통계를 사용자에게 출력합니다
 
 ## 원칙

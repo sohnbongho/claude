@@ -12,7 +12,7 @@
 | `@myreview` | 코드 리뷰 및 품질/보안 검증 | Sonnet (최신) |
 | `@mysetup` | Claude Code 설정 관리 | Sonnet (최신) |
 | `@anal` | 코드 분석 전문 (수정 없음, 읽기·분석만) | Sonnet (최신) |
-| `@myindex` | workspace 인덱스 생성·갱신 (INDEX.md 작성) | Sonnet (최신) |
+| `@myindex` | workspace 인덱스 생성·갱신 (마스터 INDEX.md + `~/.claude/index/{콘텐츠}/` 서브 인덱스) | Sonnet (최신) |
 | `@unity` | Unity 전담 (분석/계획/구현/리뷰 멀티모드) | Sonnet (최신) |
 
 > `/advisor` 도구만 Opus (최신) 사용. 버전은 고정하지 않아 항상 최신 모델로 동작.
