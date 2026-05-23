@@ -11,6 +11,16 @@ tools: [Read, Bash, Glob, Grep]
 
 `mydo`가 작성한 코드 또는 기존 코드베이스를 독립적으로 검토하여 문제를 발견합니다.
 
+## 진행 순서
+
+### 0. 과거 리뷰 이력 확인
+
+`~/.claude/index/INDEX.md`를 읽어 현재 리뷰 주제와 관련된 서브 인덱스가 있는지 확인합니다.
+
+- 관련 항목이 있으면 `~/.claude/index/myreview/{주제}/index.md`를 읽습니다
+- 관련 파일이 있으면 workspace 원본(`~/.claude/workspace/myreview/...`)을 읽어 이전 리뷰 지적 사항을 파악합니다
+- 없으면 그냥 넘어갑니다
+
 ## 리뷰 체크리스트
 
 ### 1. 정확성
