@@ -10,11 +10,6 @@
       "Bash(git *)",
       "Skill(update-config)",
       "Bash(bash -c 'cd ~/.claude && if ! git diff --quiet || ! git diff --cached --quiet || [ -n \"$\\(git ls-files --others --exclude-standard\\)\" ]; then git add -A && git diff --cached --quiet || \\(git commit -m \"Auto-sync: $\\(date \\\\\"+%Y-%m-%d %H:%M:%S\\\\\"\\)\" && git push origin main 2>&1\\); fi; exit 0')",
-      "Bash(mv orchestrator.md myor.md)",
-      "Bash(mv planner.md myplan.md)",
-      "Bash(mv coder.md mydo.md)",
-      "Bash(mv reviewer.md myreview.md)",
-      "Bash(mv claude-config.md mysetup.md)",
       "Bash(chmod +x *)",
       "Bash(ssh-keygen *)",
       "Bash(ssh *)"
