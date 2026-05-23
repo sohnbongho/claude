@@ -7,15 +7,40 @@
 
 ---
 
-## anal / csharp_likeactor
-> 서브 인덱스: `~/.claude/index/anal/csharp_likeactor/index.md`
+## anal / stability
+> 서브 인덱스: `~/.claude/index/anal/stability/index.md`
 
 ---
 
-## myplan / csharp_likeactor
-> 서브 인덱스: `~/.claude/index/myplan/csharp_likeactor/index.md`
+## anal / capacity
+> 서브 인덱스: `~/.claude/index/anal/capacity/index.md`
 
 ---
 
-## myreview / csharp_likeactor
-> 서브 인덱스: `~/.claude/index/myreview/csharp_likeactor/index.md`
+## anal / thread
+> 서브 인덱스: `~/.claude/index/anal/thread/index.md`
+
+---
+
+## myplan / thread
+> 서브 인덱스: `~/.claude/index/myplan/thread/index.md`
+
+---
+
+## myplan / channel
+> 서브 인덱스: `~/.claude/index/myplan/channel/index.md`
+
+---
+
+## myplan / ratelimiter
+> 서브 인덱스: `~/.claude/index/myplan/ratelimiter/index.md`
+
+---
+
+## myplan / db
+> 서브 인덱스: `~/.claude/index/myplan/db/index.md`
+
+---
+
+## myplan / login
+> 서브 인덱스: `~/.claude/index/myplan/login/index.md`
