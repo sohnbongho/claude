@@ -60,20 +60,26 @@
 
 ## 결과물 저장 (workspace)
 
-`myreview`, `anal`, `myplan` 스킬 실행 결과는 아래 경로에 자동 저장됩니다.
+`myreview`, `anal`, `myplan` 스킬 실행 결과는 **두 곳에 동시 저장**됩니다.
 
+### ① 프로젝트 로컬 (원본)
 ```
-~/.claude/workspace/{스킬명}/{콘텐츠}/YYYYMMDD-<대상요약>.md
+{프로젝트루트}/.claude/{스킬명}/YYYYMMDD_<대상요약>.md
 ```
 
-| 스킬 | 저장 경로 예시 |
-|------|--------------|
-| `myreview` | `~/.claude/workspace/myreview/auth/20260523-login-flow-security.md` |
-| `anal` | `~/.claude/workspace/anal/db/20260523-user-session-flow.md` |
-| `myplan` | `~/.claude/workspace/myplan/payment/20260523-oauth2-integration.md` |
+### ② 글로벌 workspace (아카이브)
+```
+~/.claude/workspace/{스킬명}/{프로젝트명}/YYYYMMDD-<대상요약>.md
+```
 
-- `{콘텐츠}`: 대상의 카테고리 또는 모듈명 (에이전트가 내용 기반으로 결정)
-- 폴더가 없으면 자동 생성
+| 스킬 | 로컬 원본 예시 | 글로벌 아카이브 예시 |
+|------|--------------|---------------------|
+| `myreview` | `.claude/myreview/20260523_login-security.md` | `~/.claude/workspace/myreview/myapp/20260523-login-security.md` |
+| `anal` | `.claude/anal/20260523_session-flow.md` | `~/.claude/workspace/anal/myapp/20260523-session-flow.md` |
+| `myplan` | `.claude/myplan/20260523_oauth2.md` | `~/.claude/workspace/myplan/myapp/20260523-oauth2.md` |
+
+- `{프로젝트명}`: 현재 git 저장소 이름 또는 작업 디렉토리명
+- 두 파일의 내용은 동일, 폴더가 없으면 자동 생성
 
 ## 설정 파일
 

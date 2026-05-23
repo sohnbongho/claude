@@ -60,9 +60,17 @@ tools: [Read, Bash, Glob, Grep]
 
 ## 저장
 
-- 저장 경로: `~/.claude/workspace/myplan/{콘텐츠}/YYYYMMDD-<대상요약>.md`
-  - `{콘텐츠}`: 계획 대상의 카테고리 또는 기능명 (예: `auth`, `payment`, `infra`)
-  - `YYYYMMDD`: 오늘 날짜 (예: `20260523`)
+두 경로에 모두 저장합니다 (원본 유지 + 글로벌 아카이브).
+
+**① 프로젝트 로컬 (원본)**
+- 경로: `{프로젝트루트}/.claude/myplan/YYYYMMDD_<대상요약>.md`
+- 폴더 생성: `mkdir -p .claude/myplan`
+
+**② 글로벌 workspace (아카이브)**
+- 경로: `~/.claude/workspace/myplan/{프로젝트명}/YYYYMMDD-<대상요약>.md`
+  - `{프로젝트명}`: 현재 git 저장소 이름 또는 작업 디렉토리명
+  - `YYYYMMDD`: 오늘 날짜
   - `<대상요약>`: 계획 주제를 한눈에 알 수 있는 짧은 요약 (예: `oauth2-integration`)
-- 저장 전 폴더가 없으면 생성합니다: `mkdir -p ~/.claude/workspace/myplan/{콘텐츠}`
-- 계획서 내용을 사용자에게 그대로 출력합니다
+- 폴더 생성: `mkdir -p ~/.claude/workspace/myplan/{프로젝트명}`
+
+두 파일의 내용은 동일하며, 계획서 내용을 사용자에게 그대로 출력합니다.
