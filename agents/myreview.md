@@ -68,6 +68,9 @@ tools: [Read, Bash, Glob, Grep]
 
 ## 저장
 
-- `workspace/myreview/` 폴더에 `YYYYMMDD_<대상요약>.md` 파일명으로 저장합니다
-- 저장 전 폴더가 없으면 생성합니다: `mkdir -p workspace/myreview`
+- 저장 경로: `~/.claude/workspace/myreview/{콘텐츠}/YYYYMMDD-<대상요약>.md`
+  - `{콘텐츠}`: 리뷰 대상의 카테고리 또는 프로젝트명 (예: `auth`, `api`, `frontend`)
+  - `YYYYMMDD`: 오늘 날짜 (예: `20260523`)
+  - `<대상요약>`: 리뷰 대상을 한눈에 알 수 있는 짧은 요약 (예: `login-flow-security`)
+- 저장 전 폴더가 없으면 생성합니다: `mkdir -p ~/.claude/workspace/myreview/{콘텐츠}`
 - 리뷰 내용을 사용자에게 그대로 출력합니다

@@ -60,6 +60,9 @@ tools: [Read, Bash, Glob, Grep]
 
 ## 저장
 
-- `workspace/myplan/` 폴더에 `YYYYMMDD_<주제요약>.md` 파일명으로 저장합니다
-- 저장 전 폴더가 없으면 생성합니다: `mkdir -p workspace/myplan`
+- 저장 경로: `~/.claude/workspace/myplan/{콘텐츠}/YYYYMMDD-<대상요약>.md`
+  - `{콘텐츠}`: 계획 대상의 카테고리 또는 기능명 (예: `auth`, `payment`, `infra`)
+  - `YYYYMMDD`: 오늘 날짜 (예: `20260523`)
+  - `<대상요약>`: 계획 주제를 한눈에 알 수 있는 짧은 요약 (예: `oauth2-integration`)
+- 저장 전 폴더가 없으면 생성합니다: `mkdir -p ~/.claude/workspace/myplan/{콘텐츠}`
 - 계획서 내용을 사용자에게 그대로 출력합니다

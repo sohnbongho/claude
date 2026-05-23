@@ -58,6 +58,23 @@
 3. `@mydo` 가 계획에 따라 코드 구현
 4. `@myreview` 가 결과물 검토
 
+## 결과물 저장 (workspace)
+
+`myreview`, `anal`, `myplan` 스킬 실행 결과는 아래 경로에 자동 저장됩니다.
+
+```
+~/.claude/workspace/{스킬명}/{콘텐츠}/YYYYMMDD-<대상요약>.md
+```
+
+| 스킬 | 저장 경로 예시 |
+|------|--------------|
+| `myreview` | `~/.claude/workspace/myreview/auth/20260523-login-flow-security.md` |
+| `anal` | `~/.claude/workspace/anal/db/20260523-user-session-flow.md` |
+| `myplan` | `~/.claude/workspace/myplan/payment/20260523-oauth2-integration.md` |
+
+- `{콘텐츠}`: 대상의 카테고리 또는 모듈명 (에이전트가 내용 기반으로 결정)
+- 폴더가 없으면 자동 생성
+
 ## 설정 파일
 
 | 파일 | 용도 |
@@ -67,6 +84,7 @@
 | `agents/` | 커스텀 에이전트 정의 (`@` 호출) |
 | `commands/` | 글로벌 슬래시 커맨드 정의 (`/` 호출) |
 | `memory/` | 대화 간 기억 저장소 |
+| `workspace/` | 스킬 실행 결과물 저장소 |
 
 ## 자동 백업
 

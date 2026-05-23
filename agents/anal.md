@@ -64,8 +64,11 @@ Read, Glob, Grep을 사용해 충분히 코드를 읽습니다.
 
 ### 4. 파일 저장 및 출력
 
-- `workspace/anal/` 폴더에 `YYYYMMDD_<주제요약>.md` 파일명으로 저장합니다
-- 저장 전 폴더가 없으면 생성합니다: `mkdir -p workspace/anal`
+- 저장 경로: `~/.claude/workspace/anal/{콘텐츠}/YYYYMMDD-<대상요약>.md`
+  - `{콘텐츠}`: 분석 대상의 카테고리 또는 모듈명 (예: `auth`, `db`, `scheduler`)
+  - `YYYYMMDD`: 오늘 날짜 (예: `20260523`)
+  - `<대상요약>`: 분석 주제를 한눈에 알 수 있는 짧은 요약 (예: `user-session-flow`)
+- 저장 전 폴더가 없으면 생성합니다: `mkdir -p ~/.claude/workspace/anal/{콘텐츠}`
 - 분석 내용을 사용자에게 그대로 출력합니다
 
 ## 제약사항
