@@ -1,7 +1,4 @@
 {
-  "model": "sonnet",
-  "theme": "dark",
-  "advisorModel": "opus",
   "hooks": {
     "Stop": [
       {
@@ -14,5 +11,7 @@
         ]
       }
     ]
-  }
+  },
+  "advisorModel": "opus",
+  "theme": "dark"
 }
