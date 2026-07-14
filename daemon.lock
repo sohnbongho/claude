@@ -1,14 +1,16 @@
 {
-  "pid": 15266,
-  "version": "2.1.143",
+  "pid": 1018,
+  "version": "2.1.209",
   "jsonPath": "/home/bhson/.claude/daemon.json",
   "logPath": "/home/bhson/.claude/daemon.log",
-  "startedAt": 1778912081463,
+  "startedAt": 1784067601690,
   "origin": "transient",
   "spawnedBy": {
-    "label": "claude agents",
+    "label": "claude",
     "cwd": "/home/bhson",
-    "pid": 15246
+    "pid": 923
   },
-  "procStart": "2406853"
+  "procStart": "16576",
+  "launchTarget": "/home/bhson/.local/share/claude/versions/2.1.209",
+  "processWrapper": ""
 }

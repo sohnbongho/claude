@@ -44,3 +44,11 @@
 [2026-05-16T08:10:40.602Z] [supervisor] auth: proactive refresh starting
 [2026-05-16T08:10:41.042Z] [supervisor] auth: scheduling proactive refresh in 28560s
 [2026-05-16T08:10:41.042Z] [supervisor] auth: proactive refresh succeeded
+[2026-07-14T22:20:01.685Z] [supervisor] ─── daemon start ─── version=2.1.209 pid=1018 origin=transient
+[2026-07-14T22:20:01.796Z] [supervisor] auth: scheduling proactive refresh in 28498s
+[2026-07-14T22:20:01.798Z] [supervisor] auth: scheduling proactive refresh in 28498s
+[2026-07-14T22:20:01.799Z] [supervisor] workers=0
+[2026-07-14T22:20:01.805Z] [bg] bg: control socket bound at /tmp/cc-daemon-1000/f6b0131a/control.sock
+[2026-07-14T22:20:01.906Z] [bg] bg spawned c5738e63 (spare)
+[2026-07-14T22:20:01.907Z] [bg] bg spawned 1a112ec6 (fleet)
+[2026-07-14T22:20:01.909Z] [bg] bg spare spawned host pid=1049
