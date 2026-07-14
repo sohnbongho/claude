@@ -16,7 +16,8 @@
       "Bash(mv reviewer.md myreview.md)",
       "Bash(mv claude-config.md mysetup.md)",
       "Bash(chmod +x *)",
-      "Bash(claude update *)"
+      "Bash(claude update *)",
+      "Bash(claude *)"
     ]
   }
 }
