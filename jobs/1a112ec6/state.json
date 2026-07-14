@@ -20,16 +20,17 @@
     "--model",
     "claude-fable-5[1m]"
   ],
+  "bgIsolation": "none",
+  "providerEnv": {},
   "intent": "",
   "sessionId": "1a112ec6-88e5-4cf8-af17-f686614f8e57",
   "resumeSessionId": "1a112ec6-88e5-4cf8-af17-f686614f8e57",
   "daemonShort": "1a112ec6",
   "cliVersion": "2.1.209",
   "cwd": "/home/bhson",
-  "bgIsolation": "none",
-  "providerEnv": {},
-  "backend": "daemon",
   "createdAt": "2026-07-14T22:20:06.342Z",
   "updatedAt": "2026-07-14T22:31:28.429Z",
-  "firstTerminalAt": "2026-07-14T22:25:09.862Z"
+  "firstTerminalAt": "2026-07-14T22:25:09.862Z",
+  "backend": "daemon",
+  "suggestedReply": "gitignore에 추가해줘"
 }
