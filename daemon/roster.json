@@ -1,64 +1,8 @@
 {
   "proto": 1,
   "supervisorPid": 1018,
-  "updatedAt": 1784067603342,
+  "updatedAt": 1784068277473,
   "workers": {
-    "c5738e63": {
-      "pid": 1051,
-      "procStart": "16710",
-      "sessionId": "c5738e63-ed19-4dae-b6c7-0c8747acb25b",
-      "rendezvousSock": "/tmp/cc-daemon-1000/f6b0131a/rv/c5738e63.sock",
-      "ptySock": "/tmp/cc-daemon-1000/f6b0131a/pty/c5738e63.sock",
-      "cliVersion": "2.1.209",
-      "startedAt": 1784067601906,
-      "attempt": 1,
-      "cwd": "/home/bhson",
-      "dispatch": {
-        "proto": 1,
-        "short": "c5738e63",
-        "nonce": "4bab07b1",
-        "sessionId": "c5738e63-ed19-4dae-b6c7-0c8747acb25b",
-        "createdAt": 1784067606386,
-        "source": "spare",
-        "cwd": "/home/bhson",
-        "launch": {
-          "mode": "prompt",
-          "args": [
-            "--session-id",
-            "c5738e63-ed19-4dae-b6c7-0c8747acb25b",
-            "--agent",
-            "claude",
-            "--permission-mode",
-            "default"
-          ]
-        },
-        "env": {},
-        "isolation": "none",
-        "respawnFlags": [
-          "--agent",
-          "claude",
-          "--permission-mode",
-          "default"
-        ],
-        "agent": "claude",
-        "seed": {
-          "intent": ""
-        },
-        "cols": 108,
-        "rows": 30
-      },
-      "decModes": [
-        1000,
-        1002,
-        1003,
-        1006,
-        2004,
-        1004,
-        2031
-      ],
-      "rvAuth": "3393c9fa3a9e86ffcfe6e7eae13c340a",
-      "ptyAuth": "3a7a34c9c62254e74344a274919a44e4"
-    },
     "1a112ec6": {
       "pid": 1053,
       "procStart": "16710",
