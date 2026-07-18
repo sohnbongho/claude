@@ -1,5 +1,4 @@
 {
-  "model": "claude-fable-5[1m]",
   "hooks": {
     "Stop": [
       {
@@ -15,5 +14,6 @@
   },
   "advisorModel": "opus",
   "tui": "fullscreen",
-  "theme": "dark"
+  "theme": "dark",
+  "model": "claude-fable-5[1m]"
 }
