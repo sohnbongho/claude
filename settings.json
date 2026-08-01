@@ -14,6 +14,5 @@
   },
   "advisorModel": "opus",
   "tui": "fullscreen",
-  "theme": "dark",
-  "model": "claude-fable-5[1m]"
+  "theme": "dark"
 }
