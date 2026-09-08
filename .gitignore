@@ -28,3 +28,7 @@ projects/**/tool-results/
 # OS 파일
 .DS_Store
 Thumbs.db
+
+# 자동 백업 훅이 생성하는 상태 파일 (커밋되면 매 세션 churn 발생)
+sync-status.log
+.sync-failed

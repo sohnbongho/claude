@@ -92,6 +92,7 @@
 | `agents/` | 커스텀 에이전트 정의 (`@` 호출) |
 | `commands/` | 글로벌 슬래시 커맨드 정의 (`/` 호출) |
 | `skills/` | 직접 작성한 개인 스킬 (`/` 호출, 모델이 상황 보고 자동 호출) |
+| `hooks/` | 훅 스크립트 (자동 백업 등) |
 | `memory/` | 대화 간 기억 저장소 |
 | `plugins/` | 설치한 플러그인 스킬 (자동 다운로드, git 추적 제외) |
 | `workspace/` | 스킬 실행 결과물 저장소 |
@@ -99,4 +100,29 @@
 ## 자동 백업
 
 세션 종료 시 변경사항이 자동으로 이 저장소에 commit/push됩니다.
-(`settings.json`의 `Stop` 훅으로 동작)
+(`settings.json`의 `Stop` 훅 → `hooks/auto-sync.sh`)
+
+| 훅 | 스크립트 | 동작 |
+|----|----------|------|
+| `Stop` | `hooks/auto-sync.sh` | 변경사항 commit 후 `origin main`에 push |
+| `SessionStart` | `hooks/check-sync.sh` | 지난 세션의 push 실패를 세션 시작 시 알림 |
+
+**push 실패 시** — 실패를 삼키지 않고 3중으로 알립니다:
+
+1. `sync-status.log` 에 결과 기록 (성공/실패 모두)
+2. `.sync-failed` 마커 파일에 원인·미푸시 커밋 수·분기 여부 기록
+3. 다음 세션 시작 시 알림
+
+분기(로컬·원격이 갈라진 상태)는 **감지만 하고 자동 해결하지 않습니다.** 설정 파일 충돌은
+양쪽을 보고 사람이 판단해야 하므로, 무인 rebase/merge로 `~/.claude`가 깨지는 것을 막습니다.
+
+```bash
+# 실패 원인 확인
+cat ~/.claude/.sync-failed
+# 원격에만 있는 커밋 확인
+git -C ~/.claude log --oneline HEAD..origin/main
+# 훅 직접 실행 (테스트)
+bash ~/.claude/hooks/auto-sync.sh
+```
+
+미푸시 커밋은 다음 세션에서 자동 재시도됩니다. `main` 브랜치가 아닐 때는 동작하지 않습니다.
