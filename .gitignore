@@ -32,3 +32,18 @@ Thumbs.db
 # 자동 백업 훅이 생성하는 상태 파일 (커밋되면 매 세션 churn 발생)
 sync-status.log
 .sync-failed
+
+# 런타임 생성물 (데몬/IDE/작업 상태) — 세션마다 바뀌어 커밋 노이즈만 만든다
+daemon/
+daemon.lock
+daemon.status.json
+ide/
+jobs/
+
+# 업데이트·정리 타임스탬프
+.last-cleanup
+.last-update-result.json
+
+# 서브에이전트 메타데이터 (세션마다 생성)
+# 주의: projects/**/memory/ 는 실제 자산이므로 제외하지 않는다
+projects/**/subagents/
