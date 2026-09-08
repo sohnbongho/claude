@@ -17,7 +17,19 @@
       "Bash(mv claude-config.md mysetup.md)",
       "Bash(chmod +x *)",
       "Bash(claude update *)",
-      "Bash(claude *)"
+      "Bash(claude *)",
+      "Bash(ssh-keygen *)",
+      "Bash(ssh *)",
+      "Bash(mkdir -p .claude/*)",
+      "Bash(mkdir -p ~/.claude/workspace/*)",
+      "Write(.claude/anal/*.md)",
+      "Write(.claude/myplan/*.md)",
+      "Write(.claude/myreview/*.md)",
+      "Write(/home/bhson/.claude/workspace/**)",
+      "Edit(.claude/anal/*.md)",
+      "Edit(.claude/myplan/*.md)",
+      "Edit(.claude/myreview/*.md)",
+      "Edit(/home/bhson/.claude/workspace/**)"
     ]
   }
 }

@@ -1,0 +1,1 @@
+- [Claude 설정 git 동기화](claude-config-git-sync.md) — ~/.claude가 sohnbongho/claude 저장소와 Stop 훅으로 자동 동기화

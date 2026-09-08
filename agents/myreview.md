@@ -11,6 +11,16 @@ tools: [Read, Bash, Glob, Grep]
 
 `mydo`가 작성한 코드 또는 기존 코드베이스를 독립적으로 검토하여 문제를 발견합니다.
 
+## 진행 순서
+
+### 0. 과거 리뷰 이력 확인
+
+`~/.claude/index/INDEX.md`를 읽어 현재 리뷰 주제와 관련된 서브 인덱스가 있는지 확인합니다.
+
+- 관련 항목이 있으면 `~/.claude/index/myreview/{주제}/index.md`를 읽습니다
+- 관련 파일이 있으면 workspace 원본(`~/.claude/workspace/myreview/...`)을 읽어 이전 리뷰 지적 사항을 파악합니다
+- 없으면 그냥 넘어갑니다
+
 ## 리뷰 체크리스트
 
 ### 1. 정확성
@@ -68,6 +78,17 @@ tools: [Read, Bash, Glob, Grep]
 
 ## 저장
 
-- `workspace/myreview/` 폴더에 `YYYYMMDD_<대상요약>.md` 파일명으로 저장합니다
-- 저장 전 폴더가 없으면 생성합니다: `mkdir -p workspace/myreview`
-- 리뷰 내용을 사용자에게 그대로 출력합니다
+두 경로에 모두 저장합니다 (원본 유지 + 글로벌 아카이브).
+
+**① 프로젝트 로컬 (원본)**
+- 경로: `{프로젝트루트}/.claude/myreview/YYYYMMDD_<대상요약>.md`
+- 폴더 생성: `mkdir -p .claude/myreview`
+
+**② 글로벌 workspace (아카이브)**
+- 경로: `~/.claude/workspace/myreview/{프로젝트명}/YYYYMMDD-<대상요약>.md`
+  - `{프로젝트명}`: 현재 git 저장소 이름 또는 작업 디렉토리명
+  - `YYYYMMDD`: 오늘 날짜
+  - `<대상요약>`: 리뷰 대상을 한눈에 알 수 있는 짧은 요약 (예: `login-flow-security`)
+- 폴더 생성: `mkdir -p ~/.claude/workspace/myreview/{프로젝트명}`
+
+두 파일의 내용은 동일하며, 리뷰 내용을 사용자에게 그대로 출력합니다.

@@ -13,6 +13,14 @@ tools: [Read, Bash, Glob, Grep]
 
 ## 진행 순서
 
+### 0. 과거 분석 이력 확인
+
+`~/.claude/index/INDEX.md`를 읽어 현재 분석 주제와 관련된 서브 인덱스가 있는지 확인합니다.
+
+- 관련 항목이 있으면 해당 `~/.claude/index/anal/{주제}/index.md`를 읽습니다
+- 관련 파일이 있으면 workspace 원본(`~/.claude/workspace/anal/...`)을 읽어 중복 분석을 피하고 이전 맥락을 활용합니다
+- 없으면 그냥 넘어갑니다
+
 ### 1. 분석 대상 파악
 
 - 인자가 특정 파일/클래스/메서드를 지정하면 해당 범위를 분석합니다
@@ -64,9 +72,20 @@ Read, Glob, Grep을 사용해 충분히 코드를 읽습니다.
 
 ### 4. 파일 저장 및 출력
 
-- `workspace/anal/` 폴더에 `YYYYMMDD_<주제요약>.md` 파일명으로 저장합니다
-- 저장 전 폴더가 없으면 생성합니다: `mkdir -p workspace/anal`
-- 분석 내용을 사용자에게 그대로 출력합니다
+두 경로에 모두 저장합니다 (원본 유지 + 글로벌 아카이브).
+
+**① 프로젝트 로컬 (원본)**
+- 경로: `{프로젝트루트}/.claude/anal/YYYYMMDD_<대상요약>.md`
+- 폴더 생성: `mkdir -p .claude/anal`
+
+**② 글로벌 workspace (아카이브)**
+- 경로: `~/.claude/workspace/anal/{프로젝트명}/YYYYMMDD-<대상요약>.md`
+  - `{프로젝트명}`: 현재 git 저장소 이름 또는 작업 디렉토리명
+  - `YYYYMMDD`: 오늘 날짜
+  - `<대상요약>`: 분석 주제를 한눈에 알 수 있는 짧은 요약 (예: `user-session-flow`)
+- 폴더 생성: `mkdir -p ~/.claude/workspace/anal/{프로젝트명}`
+
+두 파일의 내용은 동일하며, 분석 내용을 사용자에게 그대로 출력합니다.
 
 ## 제약사항
 

@@ -13,6 +13,8 @@ tools: [Read, Bash, Glob, Grep]
 
 ## 계획 수립 순서
 
+0. **과거 계획 이력 확인**: `~/.claude/index/INDEX.md`를 읽어 현재 주제와 관련된 서브 인덱스가 있는지 확인합니다. 관련 항목이 있으면 `~/.claude/index/myplan/{주제}/index.md` → workspace 원본 순으로 읽어 이전 설계 맥락을 파악하고 중복 계획을 피합니다.
+
 1. **현황 파악**: 관련 파일과 코드베이스 탐색
 2. **요구사항 분석**: 무엇을 만들어야 하는지 정의
 3. **아키텍처 설계**: 전체 구조와 컴포넌트 관계 설계
@@ -60,6 +62,17 @@ tools: [Read, Bash, Glob, Grep]
 
 ## 저장
 
-- `workspace/myplan/` 폴더에 `YYYYMMDD_<주제요약>.md` 파일명으로 저장합니다
-- 저장 전 폴더가 없으면 생성합니다: `mkdir -p workspace/myplan`
-- 계획서 내용을 사용자에게 그대로 출력합니다
+두 경로에 모두 저장합니다 (원본 유지 + 글로벌 아카이브).
+
+**① 프로젝트 로컬 (원본)**
+- 경로: `{프로젝트루트}/.claude/myplan/YYYYMMDD_<대상요약>.md`
+- 폴더 생성: `mkdir -p .claude/myplan`
+
+**② 글로벌 workspace (아카이브)**
+- 경로: `~/.claude/workspace/myplan/{프로젝트명}/YYYYMMDD-<대상요약>.md`
+  - `{프로젝트명}`: 현재 git 저장소 이름 또는 작업 디렉토리명
+  - `YYYYMMDD`: 오늘 날짜
+  - `<대상요약>`: 계획 주제를 한눈에 알 수 있는 짧은 요약 (예: `oauth2-integration`)
+- 폴더 생성: `mkdir -p ~/.claude/workspace/myplan/{프로젝트명}`
+
+두 파일의 내용은 동일하며, 계획서 내용을 사용자에게 그대로 출력합니다.

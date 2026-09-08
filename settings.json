@@ -13,9 +13,13 @@
     ]
   },
   "advisorModel": "opus",
-  "tui": "fullscreen",
   "theme": "dark",
+  "tui": "fullscreen",
   "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true,
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "enabledPlugins": {
     "mattpocock-skills@claude-plugins-official": true
   }
