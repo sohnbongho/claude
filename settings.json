@@ -1,5 +1,8 @@
 {
-  "model": "sonnet",
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "model": "opus[1m]",
   "hooks": {
     "Stop": [
       {
@@ -15,8 +18,5 @@
   },
   "advisorModel": "opus",
   "theme": "dark",
-  "skipAutoPermissionPrompt": true,
-  "permissions": {
-    "defaultMode": "auto"
-  }
+  "skipAutoPermissionPrompt": true
 }
