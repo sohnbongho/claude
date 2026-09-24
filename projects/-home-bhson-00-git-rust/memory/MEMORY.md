@@ -1,0 +1,1 @@
+- [한국어로 답변](respond-in-korean.md) — 모든 응답은 한국어로
