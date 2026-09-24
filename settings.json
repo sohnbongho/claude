@@ -1,4 +1,7 @@
 {
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "model": "opus[1m]",
   "hooks": {
     "Stop": [
@@ -25,15 +28,12 @@
       }
     ]
   },
-  "advisorModel": "opus",
-  "theme": "dark",
-  "tui": "fullscreen",
-  "agentPushNotifEnabled": true,
-  "skipAutoPermissionPrompt": true,
-  "permissions": {
-    "defaultMode": "auto"
-  },
   "enabledPlugins": {
     "mattpocock-skills@claude-plugins-official": true
-  }
+  },
+  "advisorModel": "opus",
+  "tui": "fullscreen",
+  "theme": "dark",
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true
 }
