@@ -16,9 +16,15 @@ git -C ~/.claude push origin main
 
 이 규칙은 Stop 훅의 자동 push와 별개로, 에이전트 변경 시점에 즉시 수행한다.
 
-## git 커밋·push는 사용자가 직접 한다
+## 전역 설정 변경 시 commit·push
 
-모든 프로젝트에서 `git commit` / `git push` 는 사용자가 직접 수행한다.
+전역 CLAUDE.md(`~/.claude/CLAUDE.md`)나 전역 스킬(`~/.claude/skills/`)을 추가·수정·삭제하면
+Claude가 바로 commit 하고 `git push origin main` 까지 수행한다.
 
-- Claude는 파일 수정까지만 하고, 커밋·push는 하지 않는다. 사용자가 명시적으로 요청한 경우만 예외.
-- 작업을 마치면 커밋하지 않은 변경 사항(`git status` 기준)을 알려 주되, "커밋할까요?" 라고 묻지 않는다.
+```bash
+git -C ~/.claude add CLAUDE.md skills/
+git -C ~/.claude commit -m "변경 내용 요약"
+git -C ~/.claude push origin main
+```
+
+개별 프로젝트 저장소의 commit·push 여부는 각 프로젝트의 CLAUDE.md 지침을 따른다.
