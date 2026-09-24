@@ -1,0 +1,1 @@
+- [Sudoku Game](sudoku-game.md) — 코드 부트스트랩 스도쿠 게임: Play만 누르면 실행, 씬은 비어있는 게 정상, 세로 화면 필수

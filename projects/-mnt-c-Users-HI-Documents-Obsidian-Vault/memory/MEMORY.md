@@ -1,0 +1,1 @@
+- [WSL Edit 산발적 ENOENT](wsl-edit-spurious-enoent.md) — Edit/Write가 ENOENT 반환해도 쓰기는 적용됨, 재시도 말고 Read로 확인
