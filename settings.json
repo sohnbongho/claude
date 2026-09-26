@@ -2,7 +2,7 @@
   "permissions": {
     "defaultMode": "auto"
   },
-  "model": "opus[1m]",
+  "model": "opus",
   "hooks": {
     "Stop": [
       {
@@ -29,9 +29,10 @@
     ]
   },
   "enabledPlugins": {
-    "mattpocock-skills@claude-plugins-official": true
+    "mattpocock-skills@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true
   },
-  "advisorModel": "opus",
+  "advisorModel": "fable",
   "tui": "fullscreen",
   "theme": "dark",
   "agentPushNotifEnabled": true,
